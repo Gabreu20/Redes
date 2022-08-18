@@ -106,8 +106,8 @@ void menu(int n, char buffer[MAXLINE], unsigned int len, char const *message, in
         cout << "Escolha uma opção:" << endl;
         cout << "[1]Enviar 1 pacote para o Servidor" << endl;
         cout << "[2]Enviar 10 pacotes para o Servidor" << endl;
-        cout << "[3]Enviar 1 pacote de 1M(1024 Bytes) para o Servidor" << endl;
-        cout << "[4]Enviar 1 pacote de 10M(10240 Bytes) para o Servidor" << endl;
+        cout << "[3]Enviar 1 pacote de 1MB(1024 Bytes) para o Servidor" << endl;
+        cout << "[4]Enviar 1 pacote de 10MB(10240 Bytes) para o Servidor" << endl;
         cout << "[5]Desconectar" << endl;
         cin >> escolha;
         if(escolha < 1 || escolha > 5){
