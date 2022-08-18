@@ -80,6 +80,7 @@ int main() {
         }
         //==========================Perdas Arbitrárias de Pacotes==========================
 
+        //envia um ACK
         if(acks%janela == 0 && acks > 0){
             string send_ack = "ACK " + to_string(ackSeq);
 
@@ -89,6 +90,12 @@ int main() {
             MSG_CONFIRM, (const struct sockaddr *) &cliaddr, 
                 len); 
             printf("ACK SENT\n"); 
+        }
+        else if(acks%janela == 0 && acks == 0){
+            const char *empty = "";
+            sendto(sockfd, (const char *)empty, strlen(empty),  
+            MSG_CONFIRM, (const struct sockaddr *) &cliaddr, 
+                len);
         }
         else{
             const char *empty = "";
